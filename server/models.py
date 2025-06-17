@@ -14,5 +14,5 @@ class Pet(db.Model):
     __tablename__ = 'pets'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    name = db.Column(db.String(80), unique=True, nullable=False, index=True)
     species = db.Column(db.String)
